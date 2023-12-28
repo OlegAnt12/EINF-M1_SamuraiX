@@ -4,9 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/GestaoDeFrotasVeicular/src/gestaodefrotasveicular/GestaoDeFrotasVeicular.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/GestaoDeFrotasVeicular/src/gestaodefrotasveicular/gestaodefrotas.css</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/GestaoDeFrotasVeicular/src/gestaodefrotasveicular/GestaoDeFrotasController.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/GestaoDeFrotasVeicular/src/gestaodefrotasveicular/GestaoDeFrotas.fxml</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/GestaoDeFrotasVeicular/src/gui/login/LoginController.java</file>
         </group>
     </open-files>
 </project-private>

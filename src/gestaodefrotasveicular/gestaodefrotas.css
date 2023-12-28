@@ -5,3 +5,10 @@
 .mainFxmlClass {
 
 }
+
+.btnLogin
+{
+    width: 204px;
+    height: 54px;
+    border-radius: 30px;
+}
