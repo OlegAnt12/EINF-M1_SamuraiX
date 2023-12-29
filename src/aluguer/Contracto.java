@@ -19,6 +19,7 @@ public class Contracto {
     private int idTaxa;
     private int idArquivo;
     private int idCliente;
+    private String modeloAluguer;
 
     public int getId() {
         return id;
@@ -66,6 +67,14 @@ public class Contracto {
 
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getModeloAluguer() {
+        return modeloAluguer;
+    }
+
+    public void setModeloAluguer(String modeloAluguer) {
+        this.modeloAluguer = modeloAluguer;
     }
     
     

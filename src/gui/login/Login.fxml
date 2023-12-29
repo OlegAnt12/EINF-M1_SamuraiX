@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="380.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.login.LoginController">
+<AnchorPane id="AnchorPane" fx:id="controlo" prefHeight="548.0" prefWidth="380.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.login.LoginController">
     <stylesheets>
         <URL value="@login.css" />
     </stylesheets>
@@ -45,7 +45,7 @@
             </Button>
             <Pane layoutX="60.0" prefHeight="216.0" prefWidth="260.0" style="-fx-background-color: #1e1e1e;" styleClass="painelTop">
                <children>
-                  <Pane prefHeight="31.0" prefWidth="260.0">
+                  <Pane fx:id="painelArrastavel" onMouseDragged="#arrastarBorda" onMousePressed="#panePressed" prefHeight="31.0" prefWidth="260.0">
                      <children>
                         <Label layoutX="24.0" layoutY="4.0" text="Login" textFill="WHITE">
                            <font>

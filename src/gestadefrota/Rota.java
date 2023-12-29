@@ -13,7 +13,7 @@ public class Rota {
     private int id;
     private String origem;
     private String destino;
-    private String postosDeLigacao;
+    private String idVeiculo;
 
     public int getId() {
         return id;
@@ -37,14 +37,6 @@ public class Rota {
 
     public void setDestino(String destino) {
         this.destino = destino;
-    }
-
-    public String getPostosDeLigacao() {
-        return postosDeLigacao;
-    }
-
-    public void setPostosDeLigacao(String postosDeLigacao) {
-        this.postosDeLigacao = postosDeLigacao;
     }
     
     

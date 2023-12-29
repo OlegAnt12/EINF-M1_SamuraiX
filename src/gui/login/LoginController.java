@@ -14,6 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -23,9 +26,18 @@ import javafx.stage.Stage;
  */
 public class LoginController implements Initializable {
 
+    @FXML
+    private AnchorPane controlo;
+        
+    @FXML
+    private Pane painelArrastavel;
+     
     String caminho = "../../gui/menu/MenuAdmin.fxml";
     Scene cena;
     Stage estagio;
+    
+    private double x = 0;
+    private double y = 0;
     /**
      * Initializes the controller class.
      */
@@ -50,6 +62,22 @@ public class LoginController implements Initializable {
     private void exit(ActionEvent evento)
     {
         System.exit(0);
+    }
+    
+    @FXML
+    private void arrastarBorda (MouseEvent event)
+    {
+        Stage estagio = (Stage)controlo.getScene().getWindow();
+        estagio.setY(event.getScreenY() - y);
+        estagio.setX(event.getScreenX() - x);
+        
+    }
+    
+    @FXML
+    private void panePressed(MouseEvent event)
+    {
+        x=event.getSceneX();
+        y=event.getSceneY();
     }
     
 }
