@@ -8,11 +8,10 @@ package gestadefrota;
  *
  * @author User
  */
-public class FrotaVeicular {
+public class PontoDeReferencia {
     
     private int id;
-    private String tipo;
-    private int idRota;
+    private String pontoDeReferencia;
 
     public int getId() {
         return id;
@@ -22,20 +21,12 @@ public class FrotaVeicular {
         this.id = id;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getPontoDeReferencia() {
+        return pontoDeReferencia;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getIdRota() {
-        return idRota;
-    }
-
-    public void setIdRota(int idRota) {
-        this.idRota = idRota;
+    public void setPontoDeReferencia(String pontoDeReferencia) {
+        this.pontoDeReferencia = pontoDeReferencia;
     }
     
 }

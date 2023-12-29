@@ -4,17 +4,14 @@
  */
 package manutencao;
 
-import ocorrencia.Date;
-
 /**
  *
  * @author User
  */
-public class Manutencao {
+public class Reparo {
     
     private int id;
-    private String listaComponentes;
-    private Date data;
+    private int idVeiculo;
     private int idMecanico;
 
     public int getId() {
@@ -25,20 +22,12 @@ public class Manutencao {
         this.id = id;
     }
 
-    public String getListaComponentes() {
-        return listaComponentes;
+    public int getIdVeiculo() {
+        return idVeiculo;
     }
 
-    public void setListaComponentes(String listaComponentes) {
-        this.listaComponentes = listaComponentes;
-    }
-
-    public Date getData() {
-        return data;
-    }
-
-    public void setData(Date data) {
-        this.data = data;
+    public void setIdVeiculo(int idVeiculo) {
+        this.idVeiculo = idVeiculo;
     }
 
     public int getIdMecanico() {

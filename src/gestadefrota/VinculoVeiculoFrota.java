@@ -8,26 +8,26 @@ package gestadefrota;
  *
  * @author User
  */
-public class RotaLogistica {
+public class VinculoVeiculoFrota {
     
-    private double valorPorMetro;
-    private int idRota;
+    private int id;
+    private int idFrota;
     private int idVeiculo;
 
-    public double getValorPorMetro() {
-        return valorPorMetro;
+    public int getId() {
+        return id;
     }
 
-    public void setValorPorMetro(double valorPorMetro) {
-        this.valorPorMetro = valorPorMetro;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getIdRota() {
-        return idRota;
+    public int getIdFrota() {
+        return idFrota;
     }
 
-    public void setIdRota(int idRota) {
-        this.idRota = idRota;
+    public void setIdFrota(int idFrota) {
+        this.idFrota = idFrota;
     }
 
     public int getIdVeiculo() {
@@ -37,7 +37,6 @@ public class RotaLogistica {
     public void setIdVeiculo(int idVeiculo) {
         this.idVeiculo = idVeiculo;
     }
-    
     
     
 }

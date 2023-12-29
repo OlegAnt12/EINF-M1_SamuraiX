@@ -10,4 +10,42 @@ package gestadefrota;
  */
 public class Rota {
     
+    private int id;
+    private String origem;
+    private String destino;
+    private String postosDeLigacao;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(String origem) {
+        this.origem = origem;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public String getPostosDeLigacao() {
+        return postosDeLigacao;
+    }
+
+    public void setPostosDeLigacao(String postosDeLigacao) {
+        this.postosDeLigacao = postosDeLigacao;
+    }
+    
+    
 }

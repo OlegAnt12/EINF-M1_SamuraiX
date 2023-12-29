@@ -4,10 +4,74 @@
  */
 package personagem;
 
+import ocorrencia.Date;
+
 /**
  *
  * @author User
  */
-public class Cliente {
+public class Cliente extends Pessoa{
+    
+    private String habilitacao;
+
+    public String getHabilitacao() {
+        return habilitacao;
+    }
+
+    public void setHabilitacao(String habilitacao) {
+        this.habilitacao = habilitacao;
+    }
+
+    @Override
+    public String getbI() {
+        return bI;
+    }
+
+    @Override
+    public void setbI(String bI) {
+        this.bI = bI;
+    }
+
+    @Override
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    @Override
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    @Override
+    public int getIdContacto() {
+        return idContacto;
+    }
+
+    @Override
+    public void setIdContacto(int idContacto) {
+        this.idContacto = idContacto;
+    }
+
+    @Override
+    public int getIdLocalidade() {
+        return idLocalidade;
+    }
+
+    @Override
+    public void setIdLocalidade(int idLocalidade) {
+        this.idLocalidade = idLocalidade;
+    }
+
+    @Override
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    @Override
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+    
+    
     
 }
