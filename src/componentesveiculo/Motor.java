@@ -12,7 +12,6 @@ public class Motor extends Componente {
     
     private String tipoMotor;
     private double cilindragem;
-    private String tipoCombustivel;
     private int potencia;
 
     public String getTipoMotor() {
@@ -29,14 +28,6 @@ public class Motor extends Componente {
 
     public void setCilindragem(double cilindragem) {
         this.cilindragem = cilindragem;
-    }
-
-    public String getTipoCombustivel() {
-        return tipoCombustivel;
-    }
-
-    public void setTipoCombustivel(String tipoCombustivel) {
-        this.tipoCombustivel = tipoCombustivel;
     }
 
     public int getPotencia() {

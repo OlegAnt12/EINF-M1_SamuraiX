@@ -118,16 +118,13 @@ public class Moto extends Veiculo{
         this.imgFoto = imgFoto;
     }
 
-    @Override
-    public String getTipo() {
-        return tipo;
+    public int getIdTipo() {
+        return idTipo;
     }
 
-    @Override
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
     }
-    
-    
+ 
     
 }

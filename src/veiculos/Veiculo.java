@@ -20,7 +20,7 @@ public class Veiculo {
     protected String cor;
     protected String estado;
     protected String imgFoto;
-    protected String tipo;
+    protected int idTipo;
 
     public int getId() {
         return id;
@@ -85,15 +85,6 @@ public class Veiculo {
     public void setImgFoto(String imgFoto) {
         this.imgFoto = imgFoto;
     }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    
     
     
 }
