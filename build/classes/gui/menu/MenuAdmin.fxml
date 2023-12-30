@@ -7,13 +7,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="controlo" prefHeight="680.0" prefWidth="1182.0" snapToPixel="false" style="-fx-background-color: #F9F9F9;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.menu.MenuAdminController">
+<AnchorPane id="AnchorPane" fx:id="controlo" onMouseClicked="#getGestVeiculo" prefHeight="680.0" prefWidth="1182.0" snapToPixel="false" style="-fx-background-color: #F9F9F9;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.menu.MenuAdminController">
     <stylesheets>
         <URL value="@menuadmin.css" />
     </stylesheets>
    <children>
       <Line endX="386.0" layoutX="292.0" layoutY="344.0" startX="-100.0" stroke="#d9d9d9" />
-      <Pane fx:id="painelArrastavel" layoutX="956.0" onMouseClicked="#onclick" onMouseDragged="#arrastarBorda" onMousePressed="#panePressed" prefHeight="132.0" prefWidth="132.0" style="-fx-background-color: #1e1e1e;">
+      <Pane fx:id="painelArrastavel" layoutX="956.0" onMouseDragged="#arrastarBorda" onMousePressed="#panePressed" prefHeight="132.0" prefWidth="132.0" style="-fx-background-color: #1e1e1e;">
          <children>
             <Label layoutX="41.0" layoutY="4.0" text="Arrastar" textFill="WHITE">
                <font>

@@ -1,0 +1,12 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.txt-pesquisa
+{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, .25), 12, 0, 4, 2);
+}

@@ -32,9 +32,9 @@ public class LoginController implements Initializable {
     @FXML
     private Pane painelArrastavel;
      
-    String caminho = "../../gui/menu/MenuAdmin.fxml";
-    Scene cena;
-    Stage estagio;
+    private String caminho = "../../gui/menu/MenuAdmin.fxml";
+    private Scene cena;
+    private Stage estagio;
     
     private double x = 0;
     private double y = 0;
@@ -54,6 +54,7 @@ public class LoginController implements Initializable {
         estagio = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         estagio.setScene(cena);
+        estagio.centerOnScreen();
         estagio.show();
         
     }

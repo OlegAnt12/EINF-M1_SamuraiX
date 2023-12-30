@@ -25,6 +25,7 @@ public class GestaoDeFrotasVeicular extends Application {
         cena.getStylesheets().add(getClass().getResource("../gui/login/login.css").toExternalForm());
         estagioPrimario.initStyle(StageStyle.UNDECORATED);
         estagioPrimario.setScene(cena);
+        estagioPrimario.centerOnScreen();
         estagioPrimario.show();
     }
     /**
