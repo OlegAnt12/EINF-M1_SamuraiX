@@ -6,9 +6,8 @@
 
 }
 
-.btnLogin
+
+.btnOpcFrota
 {
-    width: 204px;
-    height: 54px;
-    border-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, .45), 12, 0, 4, 2);
 }

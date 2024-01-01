@@ -12,7 +12,7 @@ import ocorrencia.Date;
  */
 public class Veiculo {
     
-    protected int id;
+    protected String id;
     protected String marca;
     protected String modelo;
     protected int anoFabrico;
@@ -20,13 +20,27 @@ public class Veiculo {
     protected String cor;
     protected String estado;
     protected String imgFoto;
-    protected int idTipo;
+    protected String idTipo;
+    protected String frota;
 
-    public int getId() {
+    public Veiculo() {
+    }
+
+    public Veiculo(String id, String idTipo, String modelo, String cor, String matricula) {
+        this.id = id;
+        this.modelo = modelo;
+        this.matricula = matricula;
+        this.cor = cor;
+        this.idTipo = idTipo;
+    }
+    
+    
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -84,6 +98,22 @@ public class Veiculo {
 
     public void setImgFoto(String imgFoto) {
         this.imgFoto = imgFoto;
+    }
+
+    public String getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(String idTipo) {
+        this.idTipo = idTipo;
+    }
+
+    public String getFrota() {
+        return frota;
+    }
+
+    public void setFrota(String frota) {
+        this.frota = frota;
     }
     
     

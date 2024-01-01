@@ -4,9 +4,14 @@
  */
 package tratamentodedados.crud;
 
+import aluguer.Arquivo;
+import aluguer.Contracto;
+import aluguer.Taxa;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import java.sql.Statement;
 import java.sql.Connection;
+import ocorrencia.Date;
+import personagem.Cliente;
 
 /**
  *
@@ -16,6 +21,12 @@ public class CRUDContracto implements ICRUD{
     
     Statement testamento;
     ResultSetImpl res;
+    Contracto contracto = new Contracto();
+    Date data = new Date();
+    Cliente cliente = new Cliente();
+    Arquivo arquivo = new Arquivo();
+    Taxa taxa = new Taxa();
+    
 
     @Override
     public int inserir() {
@@ -33,7 +44,7 @@ public class CRUDContracto implements ICRUD{
     }
 
     @Override
-    public void selecionar() {
+    public ResultSetImpl selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

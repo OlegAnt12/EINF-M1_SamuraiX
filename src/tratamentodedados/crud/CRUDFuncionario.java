@@ -7,6 +7,8 @@ package tratamentodedados.crud;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import java.sql.Statement;
 import java.sql.Connection;
+import personagem.Funcionario;
+import personagem.Pessoa;
 
 /**
  *
@@ -16,6 +18,8 @@ public class CRUDFuncionario implements ICRUD{
     
     Statement testamento;
     ResultSetImpl res;
+    Funcionario funcionario = new Funcionario ();
+    Pessoa pessoa = new Pessoa();
 
     @Override
     public int inserir() {
@@ -33,7 +37,7 @@ public class CRUDFuncionario implements ICRUD{
     }
 
     @Override
-    public void selecionar() {
+    public ResultSetImpl selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

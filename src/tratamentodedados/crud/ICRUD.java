@@ -4,6 +4,8 @@
  */
 package tratamentodedados.crud;
 
+import com.mysql.cj.jdbc.result.ResultSetImpl;
+
 /**
  *
  * @author User
@@ -13,6 +15,6 @@ public interface ICRUD {
     public int inserir();
     public int modificar();
     public int eliminar();
-    public void selecionar();
+    public ResultSetImpl selecionar();
     
 }

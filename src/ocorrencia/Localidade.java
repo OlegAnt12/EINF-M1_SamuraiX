@@ -13,7 +13,6 @@ public class Localidade {
     private int id;
     private String distrito;
     private String provincia;
-    private String pais;
 
     public int getId() {
         return id;
@@ -37,15 +36,6 @@ public class Localidade {
 
     public void setProvincia(String provincia) {
         this.provincia = provincia;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-    
+    }   
     
 }

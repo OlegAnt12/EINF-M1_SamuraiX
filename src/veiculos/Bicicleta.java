@@ -21,12 +21,12 @@ public class Bicicleta extends Veiculo{
     }
 
     @Override
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     @Override
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -100,11 +100,11 @@ public class Bicicleta extends Veiculo{
         this.imgFoto = imgFoto;
     }
 
-    public int getIdTipo() {
+    public String getIdTipo() {
         return idTipo;
     }
 
-    public void setIdTipo(int idTipo) {
+    public void setIdTipo(String idTipo) {
         this.idTipo = idTipo;
     }
 

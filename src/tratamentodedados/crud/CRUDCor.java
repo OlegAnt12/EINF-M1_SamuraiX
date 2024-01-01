@@ -7,6 +7,7 @@ package tratamentodedados.crud;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import java.sql.Statement;
 import java.sql.Connection;
+import ocorrencia.Cor;
 
 /**
  *
@@ -16,7 +17,8 @@ public class CRUDCor implements ICRUD{
     
     Statement testamento;
     ResultSetImpl res;
-
+    Cor cor = new Cor();
+    
     @Override
     public int inserir() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -33,7 +35,7 @@ public class CRUDCor implements ICRUD{
     }
 
     @Override
-    public void selecionar() {
+    public ResultSetImpl selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

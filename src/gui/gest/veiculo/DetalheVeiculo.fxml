@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.gest.veiculo.DetalheVeiculoController">
+    <stylesheets>
+        <URL value="@detalheveiculo.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="680.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-width: 0 1px 0 0;">
+         <children>
+            <Pane layoutY="20.0" prefHeight="84.0" prefWidth="240.0" style="-fx-background-color: #1e1e1e;" />
+            <Button alignment="CENTER_RIGHT" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Veículos" textFill="#d9d9d9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Componentes" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Manutenção" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="40.0" layoutY="430.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Motorista" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="240.0" prefHeight="680.0" prefWidth="942.0" style="-fx-background-color: #f5f5f5;" styleClass="txt-pesquisa">
+         <children>
+            <Pane layoutX="462.0" prefHeight="42.0" prefWidth="360.0" style="-fx-background-color: #1e1e1e;" />
+            <TextField layoutX="462.0" layoutY="90.0" prefHeight="25.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" styleClass="txt-pesquisa">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <Pane layoutX="58.0" layoutY="208.0" prefHeight="186.0" prefWidth="852.0" style="-fx-background-color: #ffffff;" styleClass="backpane">
+               <children>
+                  <Label layoutX="36.0" layoutY="10.0" text="Modelo + Matrícula + ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="42.0" text="ID:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="42.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="68.0" text="Tipo:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="68.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="96.0" text="Capac. Passageiros:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="174.0" layoutY="96.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="124.0" text="Capac. Tanque:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="124.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="226.0" layoutY="42.0" text="Modelo:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="292.0" layoutY="42.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="226.0" layoutY="68.0" text="Matrícula:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="306.0" layoutY="68.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="226.0" layoutY="96.0" text="Qtd. Portas:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="96.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="226.0" layoutY="124.0" text="Estado:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="284.0" layoutY="124.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="436.0" layoutY="42.0" text="Marca:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="492.0" layoutY="42.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="436.0" layoutY="68.0" text="Cor:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="472.0" layoutY="68.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="436.0" layoutY="96.0" text="Km/H:" textFill="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="490.0" layoutY="96.0" text="ID" textFill="#1e1e1e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="638.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/Whale%20Shark%20and%20Diver%20Night%20Light%20Epoxy%20Resin%20Lamp%20Wood%20-%20Etsy.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="452.0" layoutY="402.0" prefHeight="240.0" prefWidth="458.0" style="-fx-background-color: #ffffff;" styleClass="backpane" />
+            <Pane layoutX="58.0" layoutY="402.0" prefHeight="74.0" prefWidth="317.0" style="-fx-background-color: #1e1e1e;" styleClass="backpane">
+               <children>
+                  <Label layoutX="36.0" layoutY="40.0" text="ID:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="40.0" text="ID" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="10.0" text="Manutenção" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="166.0" layoutY="40.0" text="Data:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="216.0" layoutY="40.0" text="45/45/2023" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="58.0" layoutY="484.0" prefHeight="74.0" prefWidth="317.0" style="-fx-background-color: #1e1e1e;" styleClass="backpane">
+               <children>
+                  <Label layoutX="36.0" layoutY="40.0" text="ID:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="40.0" text="ID" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="10.0" text="Manutenção" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="166.0" layoutY="40.0" text="Data:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="216.0" layoutY="40.0" text="45/45/2023" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="58.0" layoutY="567.0" prefHeight="74.0" prefWidth="317.0" style="-fx-background-color: #1e1e1e;" styleClass="backpane">
+               <children>
+                  <Label layoutX="36.0" layoutY="40.0" text="ID:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="40.0" text="ID" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="10.0" text="Manutenção" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="166.0" layoutY="40.0" text="Data:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="216.0" layoutY="40.0" text="45/45/2023" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="774.0" layoutY="142.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Button" />
+            <Button layoutX="708.0" layoutY="142.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Button" />
+            <Button layoutX="642.0" layoutY="142.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Button" />
+            <ComboBox layoutX="462.0" layoutY="142.0" prefHeight="48.0" prefWidth="160.0" promptText="Filtro" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </ComboBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -5,6 +5,7 @@
 package tratamentodedados.crud;
 
 import com.mysql.cj.jdbc.result.ResultSetImpl;
+import gestadefrota.FrotaVeicular;
 import java.sql.Statement;
 import java.sql.Connection;
 
@@ -16,6 +17,8 @@ public class CRUDFrota implements ICRUD{
     
     Statement testamento;
     ResultSetImpl res;
+    FrotaVeicular frota = new FrotaVeicular ();
+    
 
     @Override
     public int inserir() {
@@ -33,7 +36,7 @@ public class CRUDFrota implements ICRUD{
     }
 
     @Override
-    public void selecionar() {
+    public ResultSetImpl selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

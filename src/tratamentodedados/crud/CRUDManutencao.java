@@ -7,6 +7,10 @@ package tratamentodedados.crud;
 import com.mysql.cj.jdbc.result.ResultSetImpl;
 import java.sql.Statement;
 import java.sql.Connection;
+import manutencao.Manutencao;
+import ocorrencia.Date;
+import personagem.Mecanico;
+import veiculos.Veiculo;
 
 /**
  *
@@ -16,6 +20,10 @@ public class CRUDManutencao implements ICRUD{
     
     Statement testamento;
     ResultSetImpl res;
+    Manutencao manutencao = new Manutencao();
+    Veiculo veiculo = new Veiculo();
+    Mecanico mecanico = new Mecanico ();
+    Date data = new Date();
 
     @Override
     public int inserir() {
@@ -33,7 +41,7 @@ public class CRUDManutencao implements ICRUD{
     }
 
     @Override
-    public void selecionar() {
+    public ResultSetImpl selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
