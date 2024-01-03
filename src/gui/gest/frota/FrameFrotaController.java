@@ -43,23 +43,23 @@ public class FrameFrotaController implements Initializable {
     ObservableList<Pessoa> listaPessoa = FXCollections.observableArrayList();
     
     @FXML
-    private TableColumn<Pessoa, String> colBI;
+    private TableColumn<Motorista, String> colBI;
 
     @FXML
-    private TableColumn<Pessoa, String> colContacto;
+    private TableColumn<Motorista, String> colContacto;
     
     @FXML
-    private TableColumn<Pessoa, String> colDetalhesMotorista;
+    private TableColumn<Motorista, String> colDetalhesMotorista;
 
     @FXML
-    private TableColumn<Pessoa, String> colHabil;
+    private TableColumn<Motorista, String> colHabil;
 
     
      @FXML
-    private TableColumn<Pessoa, String> colNome;
+    private TableColumn<Motorista, String> colNome;
 
     @FXML
-    private TableColumn<Pessoa, String> colSobrenome;
+    private TableColumn<Motorista, String> colSobrenome;
     
     @FXML
     private AnchorPane controlo;
@@ -68,7 +68,7 @@ public class FrameFrotaController implements Initializable {
     private TableView<?> tabelaFrota;
 
     @FXML
-    private TableView<Pessoa> tabelaMotorista;
+    private TableView<Motorista> tabelaMotorista;
 
     @FXML
     private TableView<?> tabelaVeiculo;
@@ -106,17 +106,21 @@ public class FrameFrotaController implements Initializable {
             Class.forName("com.mysql.cj.jdbc.Driver"); 
             conexao = DriverManager.getConnection("jdbc:mysql://localhost/frotadeveiculos","root","");
             testamento = conexao.createStatement();
-            res = (ResultSetImpl) testamento.executeQuery("select * from tb_contracto");
+            res = (ResultSetImpl) testamento.executeQuery(" select bi, nome, sobre_nome, fk_contacto\n" +
+"    from tb_pessoa\n" +
+"    inner join tb_motorista\n" +
+"    on tb_pessoa.bi = tb_motorista.fk_pessoa;");
             
-            colBI.setCellValueFactory(new PropertyValueFactory<>("id"));
-            colNome.setCellValueFactory(new PropertyValueFactory<>("idCliente"));
-            colSobrenome.setCellValueFactory(new PropertyValueFactory<>("modeloAluguer"));
-            colHabil.setCellValueFactory(new PropertyValueFactory<>("dataInicio"));
-            colContacto.setCellValueFactory(new PropertyValueFactory<>("dataFim"));
+            colBI.setCellValueFactory(new PropertyValueFactory<>("bI"));
+            colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+            colSobrenome.setCellValueFactory(new PropertyValueFactory<>("sobrenome"));
+            colHabil.setCellValueFactory(new PropertyValueFactory<>("habilitacao"));
+            colContacto.setCellValueFactory(new PropertyValueFactory<>("idContacto"));
             
             while(res.next())
             {
-                listaPessoa.add(new Pessoa(
+                listaMotorista.add(new Motorista(
+                        res.getString("habilitacao"),
                 res.getString("bi"),
                         res.getString("nome"),
                         res.getString("sobre_nome"),
@@ -125,7 +129,10 @@ public class FrameFrotaController implements Initializable {
             }
             
             conexao.close();
-            tabelaMotorista.setItems(listaPessoa);
+            tabelaMotorista.setItems(listaMotorista);
+            tabelaMotorista.setVisible(true);
+            tabelaVeiculo.setVisible(false);
+            tabelaFrota.setVisible(false);
             
         }
         catch(Exception e)

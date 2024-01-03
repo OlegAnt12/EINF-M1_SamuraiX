@@ -19,7 +19,7 @@
       <Pane prefHeight="680.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
          <children>
             <Pane layoutY="20.0" prefHeight="84.0" prefWidth="240.0" style="-fx-background-color: #1e1e1e;" />
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Frotas" textAlignment="RIGHT" textFill="#d9d9d9">
+            <Button fx:id="btnFrota" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Frotas" textAlignment="RIGHT" textFill="#d9d9d9">
                <font>
                   <Font size="14.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Veiculos" textAlignment="RIGHT" textFill="#1e1e1e">
+            <Button fx:id="btnVeiculo" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Veiculos" textAlignment="RIGHT" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>
@@ -35,7 +35,7 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Motorista" textAlignment="RIGHT" textFill="#1e1e1e">
+            <Button fx:id="btnMotorista" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" onAction="#selectMotorista" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Motorista" textAlignment="RIGHT" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>
@@ -96,7 +96,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <TableView fx:id="tabelaVeiculo" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
+            <TableView fx:id="tabelaFrota" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
                <columns>
                   <TableColumn fx:id="colID1" prefWidth="113.0" text="ID" />
                   <TableColumn fx:id="colTipo1" prefWidth="95.0" text="Tipo" />
@@ -104,6 +104,26 @@
                   <TableColumn fx:id="colCor1" prefWidth="117.0" text="Cor" />
                   <TableColumn fx:id="colMatricula1" prefWidth="157.0" text="Matrícula" />
                   <TableColumn fx:id="colDetalhes1" prefWidth="107.0" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tabelaVeiculo" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
+               <columns>
+                  <TableColumn fx:id="colID11" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="colTipo11" prefWidth="95.0" text="Tipo" />
+                  <TableColumn fx:id="colModelo11" prefWidth="174.0" text="Modelo" />
+                  <TableColumn fx:id="colCor11" prefWidth="117.0" text="Cor" />
+                  <TableColumn fx:id="colMatricula11" prefWidth="157.0" text="Matrícula" />
+                  <TableColumn fx:id="colDetalhes11" prefWidth="107.0" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tabelaMotorista" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;" visible="false">
+               <columns>
+                  <TableColumn fx:id="colBI" prefWidth="113.0" text="BI" />
+                  <TableColumn fx:id="colNome" prefWidth="95.0" text="Nome" />
+                  <TableColumn fx:id="colSobrenome" prefWidth="174.0" text="Sobrenome" />
+                  <TableColumn fx:id="colContacto" prefWidth="117.0" text="Contacto" />
+                  <TableColumn fx:id="colHabil" prefWidth="157.0" text="Habilitação" />
+                  <TableColumn fx:id="colDetalhesMotorista" prefWidth="107.0" />
                </columns>
             </TableView>
          </children>
