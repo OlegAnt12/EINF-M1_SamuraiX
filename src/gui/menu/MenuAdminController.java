@@ -20,6 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -28,13 +29,14 @@ import javafx.stage.Stage;
  */
 public class MenuAdminController implements Initializable {
 
-    
     private String caminho = "../../gui/gest/veiculo/GestVeiculo.fxml";
-    private Scene cena;
-    private Stage estagio;
-    
+    Scene cena;
+    Stage estagio;
     private double x = 0;
     private double y = 0;
+    
+    @FXML
+    private Pane btnVerContracto;
     
     @FXML
     private AnchorPane controlo;
@@ -49,7 +51,6 @@ public class MenuAdminController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO      
         
-        
     }
     
     @FXML
@@ -58,7 +59,6 @@ public class MenuAdminController implements Initializable {
         Stage estagio = (Stage)controlo.getScene().getWindow();
         estagio.setY(event.getScreenY() - y);
         estagio.setX(event.getScreenX() - x);
-        
     }
     
     @FXML
@@ -71,13 +71,38 @@ public class MenuAdminController implements Initializable {
     @FXML
     private void getGestVeiculo(MouseEvent event) throws IOException
     {
-         Parent menu = FXMLLoader.load(getClass().getResource(caminho));
-         cena = new Scene(menu);
-         estagio = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-         estagio.setScene(cena);
-         estagio.centerOnScreen();
-         estagio.show();
+        estagio = new Stage();
+        Parent menu = FXMLLoader.load(getClass().getResource(caminho));
+        cena = new Scene(menu);
+        estagio = (Stage)((Node)event.getSource()).getScene().getWindow();
+        estagio.setScene(cena);
+        estagio.centerOnScreen();
+        estagio.show();
+    }
+    
+    @FXML
+    private void getGestContracto(MouseEvent event) throws IOException
+    {
+        estagio = new Stage();
+        
+            Parent menu = FXMLLoader.load(getClass().getResource("../gest/aluguer/VizualizarContractos.fxml"));
+            cena = new Scene(menu);
+            estagio = (Stage)((Node)event.getSource()).getScene().getWindow();
+            estagio.setScene(cena);
+            estagio.centerOnScreen();
+            estagio.show();
+    }
+    
+    @FXML
+    private void getGestUsuario(MouseEvent event) throws IOException
+    {
+        estagio = new Stage();
+            Parent menu = FXMLLoader.load(getClass().getResource("../gest/usuario/GestUsuario.fxml"));
+            cena = new Scene(menu);
+            estagio = (Stage)((Node)event.getSource()).getScene().getWindow();
+            estagio.setScene(cena);
+            estagio.centerOnScreen();
+            estagio.show();
     }
  
 }

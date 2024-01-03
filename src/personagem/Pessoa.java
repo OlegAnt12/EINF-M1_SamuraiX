@@ -13,10 +13,23 @@ import ocorrencia.Date;
 public class Pessoa {
     
     protected String bI;
-    protected String nomeCompleto;
+    protected String nome;
+    protected String sobrenome;
     protected int idContacto;
     protected int idLocalidade;
     protected Date dataNascimento;
+
+    public Pessoa() {
+    }
+
+    public Pessoa(String bI, String nome, String sobrenome, int idContacto) {
+        this.bI = bI;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idContacto = idContacto;
+    }
+    
+    
 
     public String getbI() {
         return bI;
@@ -24,14 +37,6 @@ public class Pessoa {
 
     public void setbI(String bI) {
         this.bI = bI;
-    }
-
-    public String getNomeCompleto() {
-        return nomeCompleto;
-    }
-
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
     }
 
     public int getIdContacto() {
@@ -56,6 +61,22 @@ public class Pessoa {
 
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
     
     

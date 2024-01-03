@@ -11,15 +11,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="controlo" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.gest.funcinario.GestFuncionarioController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.gest.frota.FrameLoisticaController">
     <stylesheets>
-        <URL value="@gestfuncionario.css" />
+        <URL value="@frameloistica.css" />
     </stylesheets>
    <children>
       <Pane prefHeight="680.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
          <children>
             <Pane layoutY="20.0" prefHeight="84.0" prefWidth="240.0" style="-fx-background-color: #1e1e1e;" />
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Funcionários" textAlignment="RIGHT" textFill="#d9d9d9">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Logística" textAlignment="RIGHT" textFill="#d9d9d9">
                <font>
                   <Font size="14.0" />
                </font>
@@ -27,15 +27,7 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Motoristas" textAlignment="RIGHT" textFill="#1e1e1e">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <padding>
-                  <Insets left="15.0" right="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Mecânicos" textAlignment="RIGHT" textFill="#1e1e1e">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Rotas" textAlignment="RIGHT" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>

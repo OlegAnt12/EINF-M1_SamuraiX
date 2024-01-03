@@ -4,10 +4,14 @@
  */
 package gui.menu;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -55,4 +59,65 @@ public class MenuGestorController implements Initializable {
         x=event.getSceneX();
         y=event.getSceneY();
     }
+    
+    @FXML
+    private void getFrameFrota(MouseEvent evento) throws IOException
+    {
+        estagio = new Stage();
+        
+        try
+        {
+            Parent menu = FXMLLoader.load(getClass().getResource("../gest/frota/FrameFrota.fxml"));
+            cena = new Scene(menu);
+            estagio = (Stage)((Node)evento.getSource()).getScene().getWindow();
+            estagio.setScene(cena);
+            estagio.centerOnScreen();
+            estagio.show();
+        }
+        catch(Exception e)
+        {
+            System.out.println(""+e);
+        }
+    }
+    
+    @FXML
+    private void getFrameLogist(MouseEvent evento) throws IOException
+    {
+        estagio = new Stage();
+        
+        try
+        {
+            Parent menu = FXMLLoader.load(getClass().getResource("../gest/frota/FrameLoistica.fxml"));
+            cena = new Scene(menu);
+            estagio = (Stage)((Node)evento.getSource()).getScene().getWindow();
+            estagio.setScene(cena);
+            estagio.centerOnScreen();
+            estagio.show();
+        }
+        catch(Exception e)
+        {
+            System.out.println(""+e);
+        }
+    }
+    
+    @FXML
+    private void getFrameFuncionario(MouseEvent evento) throws IOException
+    {
+        estagio = new Stage();
+        
+        try
+        {
+            Parent menu = FXMLLoader.load(getClass().getResource("../gest/funcinario/GestFuncionario.fxml"));
+            cena = new Scene(menu);
+            estagio = (Stage)((Node)evento.getSource()).getScene().getWindow();
+            estagio.setScene(cena);
+            estagio.centerOnScreen();
+            estagio.show();
+        }
+        catch(Exception e)
+        {
+            System.out.println(""+e);
+        }
+    }
+    
 }

@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.gest.frota.GestFrotaController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.gest.frota.GestFrotaController">
     <stylesheets>
-        <URL value="@gestfrota.css"/>
+        <URL value="@gestfrota.css" />
     </stylesheets>
+   <children>
+      <Pane prefHeight="680.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane layoutY="20.0" prefHeight="84.0" prefWidth="240.0" style="-fx-background-color: #1e1e1e;" />
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Frotas" textAlignment="RIGHT" textFill="#d9d9d9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Veiculos" textAlignment="RIGHT" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Clientes" textAlignment="RIGHT" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="430.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Motorista" textAlignment="RIGHT" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="240.0" prefHeight="680.0" prefWidth="942.0" style="-fx-background-color: #f9f9f9;">
+         <children>
+            <Pane layoutX="462.0" onMouseDragged="#arrastarBorda" onMousePressed="#panePressed" prefHeight="42.0" prefWidth="360.0" style="-fx-background-color: #1e1e1e;" />
+            <TextField layoutX="462.0" layoutY="90.0" prefHeight="25.0" prefWidth="360.0" promptText="Pesquisa" style="-fx-background-color: #FFFFFF; -fx-border-width: 0;" styleClass="txt-pesquisa">
+               <padding>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tabelaFrota" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="colTipo" prefWidth="95.0" text="Tipo" />
+                  <TableColumn fx:id="colModelo" prefWidth="174.0" text="Frota" />
+                  <TableColumn fx:id="colCor" prefWidth="117.0" />
+                  <TableColumn fx:id="colMatricula" prefWidth="157.0" />
+                  <TableColumn fx:id="colDetalhes" prefWidth="107.0" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnAddVeiculo" layoutX="642.0" layoutY="150.0" mnemonicParsing="false" onAction="#formCadastro" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;" styleClass="btnadd" text="Adicionar" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="642.0" layoutY="593.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Alterar" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="462.0" layoutY="593.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: #E79F6E; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Eliminar" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ComboBox layoutX="462.0" layoutY="152.0" prefHeight="48.0" prefWidth="160.0" promptText="Filtro" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </ComboBox>
+            <TextField layoutX="462.0" layoutY="495.0" prefHeight="25.0" prefWidth="360.0" promptText="ID, Matrícula" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button layoutX="58.0" layoutY="482.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Detalhes" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tabelaVeiculo" layoutX="58.0" layoutY="223.0" prefHeight="240.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
+               <columns>
+                  <TableColumn fx:id="colID1" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="colTipo1" prefWidth="95.0" text="Tipo" />
+                  <TableColumn fx:id="colModelo1" prefWidth="174.0" text="Modelo" />
+                  <TableColumn fx:id="colCor1" prefWidth="117.0" text="Cor" />
+                  <TableColumn fx:id="colMatricula1" prefWidth="157.0" text="Matrícula" />
+                  <TableColumn fx:id="colDetalhes1" prefWidth="107.0" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

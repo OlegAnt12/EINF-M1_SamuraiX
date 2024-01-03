@@ -51,6 +51,14 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="500.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Frotas" textAlignment="RIGHT" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Button>
          </children>
       </Pane>
       <Pane layoutX="240.0" prefHeight="680.0" prefWidth="942.0" style="-fx-background-color: #f9f9f9;">
@@ -99,6 +107,11 @@
                   <Font size="16.0" />
                </font>
             </TextField>
+            <Button layoutX="58.0" layoutY="482.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Detalhes" textFill="#1e1e1e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

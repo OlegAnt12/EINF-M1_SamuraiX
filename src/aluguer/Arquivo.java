@@ -15,6 +15,18 @@ public class Arquivo {
     private String copiaHabilitacao;
     private String fotografia;
 
+    public Arquivo() {
+    }
+
+    public Arquivo(int id, String copiaBI, String copiaHabilitacao, String fotografia) {
+        this.id = id;
+        this.copiaBI = copiaBI;
+        this.copiaHabilitacao = copiaHabilitacao;
+        this.fotografia = fotografia;
+    }
+    
+    
+
     public int getId() {
         return id;
     }

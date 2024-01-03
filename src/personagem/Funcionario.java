@@ -14,6 +14,18 @@ public class Funcionario extends Pessoa{
     
     protected String funcao;
 
+    public Funcionario() {
+    }
+
+    public Funcionario(String funcao) {
+        this.funcao = funcao;
+    }
+
+    public Funcionario(String bI, String nome, String sobrenome, int idContacto) {
+        super(bI, nome, sobrenome, idContacto);
+    }
+    
+
     public String getFuncao() {
         return funcao;
     }
@@ -32,14 +44,20 @@ public class Funcionario extends Pessoa{
         this.bI = bI;
     }
 
-    @Override
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNome() {
+        return nome;
     }
 
-    @Override
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     @Override

@@ -15,6 +15,17 @@ public class Taxa {
     private double valorAcrescimo;
     private double caucao;
 
+    public Taxa(int id, double valor, double valorAcrescimo, double caucao) {
+        this.id = id;
+        this.valor = valor;
+        this.valorAcrescimo = valorAcrescimo;
+        this.caucao = caucao;
+    }
+
+    public Taxa() {
+        
+    }
+
     public int getId() {
         return id;
     }

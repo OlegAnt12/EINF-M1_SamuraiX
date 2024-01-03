@@ -12,9 +12,23 @@ import ocorrencia.Date;
  */
 public class Condutor extends Funcionario{
     
-    private boolean conduzir;
-    private String habilitacao;
+    protected boolean conduzir;
+    protected String habilitacao;
 
+    public Condutor() {
+    }
+
+    public Condutor(boolean conduzir, String habilitacao) {
+        this.conduzir = conduzir;
+        this.habilitacao = habilitacao;
+    }
+
+    public Condutor(String habilitacao, String bI, String nome, String sobrenome, int idContacto) {
+        super(bI, nome, sobrenome, idContacto);
+        this.habilitacao = habilitacao;
+    }
+
+    
     public boolean isConduzir() {
         return conduzir;
     }
@@ -53,16 +67,23 @@ public class Condutor extends Funcionario{
         this.bI = bI;
     }
 
-    @Override
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNome() {
+        return nome;
     }
 
-    @Override
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    
     @Override
     public int getIdContacto() {
         return idContacto;

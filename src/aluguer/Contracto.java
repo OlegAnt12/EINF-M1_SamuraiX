@@ -6,7 +6,6 @@ package aluguer;
 
 import ocorrencia.Date;
 
-
 /**
  *
  * @author User
@@ -14,12 +13,23 @@ import ocorrencia.Date;
 public class Contracto {
     
     private int id;
-    private Date dataInicio;
-    private Date dataFim;
+    private String dataInicio;
+    private String dataFim;
     private int idTaxa;
     private int idArquivo;
-    private int idCliente;
+    private String idCliente;
     private String modeloAluguer;
+
+    public Contracto() {
+    }
+
+    public Contracto(int id, String dataInicio, String dataFim, String idCliente, String modeloAluguer) {
+        this.id = id;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        this.idCliente = idCliente;
+        this.modeloAluguer = modeloAluguer;
+    }
 
     public int getId() {
         return id;
@@ -29,19 +39,19 @@ public class Contracto {
         this.id = id;
     }
 
-    public Date getDataInicio() {
+    public String getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public Date getDataFim() {
+    public String getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(Date dataFim) {
+    public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
 
@@ -61,11 +71,11 @@ public class Contracto {
         this.idArquivo = idArquivo;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 

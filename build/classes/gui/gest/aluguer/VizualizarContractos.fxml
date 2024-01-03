@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.gest.aluguer.VizualizarContractosController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1182.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.gest.aluguer.VizualizarContractosController">
     <stylesheets>
         <URL value="@vizualizarcontractos.css" />
     </stylesheets>
@@ -19,7 +19,7 @@
       <Pane prefHeight="680.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
          <children>
             <Pane layoutY="20.0" prefHeight="84.0" prefWidth="240.0" style="-fx-background-color: #1e1e1e;" />
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Contractos" textAlignment="RIGHT" textFill="#d9d9d9">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" onAction="#selectContracto" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 13px;" styleClass="btnOpcVeiculo" text="Contractos" textAlignment="RIGHT" textFill="#d9d9d9">
                <font>
                   <Font size="14.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Taxas" textAlignment="RIGHT" textFill="#1e1e1e">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="290.0" mnemonicParsing="false" onAction="#selectTaxa" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Taxas" textAlignment="RIGHT" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>
@@ -35,7 +35,7 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Arquivos" textAlignment="RIGHT" textFill="#1e1e1e">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" onAction="#selectArquivo" prefHeight="54.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 13px;" text="Arquivos" textAlignment="RIGHT" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>
@@ -64,14 +64,14 @@
             <TableView fx:id="tabela" layoutX="58.0" layoutY="223.0" prefHeight="200.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;">
                <columns>
                   <TableColumn fx:id="colID" prefWidth="113.0" text="ID" />
-                  <TableColumn fx:id="colTipo" prefWidth="95.0" text="Tipo" />
+                  <TableColumn fx:id="colCliente" prefWidth="95.0" text="Cliente" />
                   <TableColumn fx:id="colModelo" prefWidth="174.0" text="Modelo" />
-                  <TableColumn fx:id="colCor" prefWidth="117.0" text="Cor" />
-                  <TableColumn fx:id="colMatricula" prefWidth="157.0" text="Matrícula" />
+                  <TableColumn fx:id="colIni" prefWidth="117.0" text="Data de Início" />
+                  <TableColumn fx:id="colFim" prefWidth="157.0" text="Data de Fim" />
                   <TableColumn fx:id="colDetalhes" prefWidth="107.0" />
                </columns>
             </TableView>
-            <Button fx:id="btnAddVeiculo" layoutX="642.0" layoutY="150.0" mnemonicParsing="false" onAction="#formCadastro" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;" styleClass="btnadd" text="+" textFill="#1e1e1e">
+            <Button fx:id="btnAddVeiculo" layoutX="642.0" layoutY="150.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;" styleClass="btnadd" text="+" textFill="#1e1e1e">
                <font>
                   <Font size="14.0" />
                </font>
@@ -91,6 +91,26 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </ComboBox>
+            <TableView fx:id="tabelaTaxa" layoutX="58.0" layoutY="223.0" prefHeight="200.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;" visible="false">
+               <columns>
+                  <TableColumn fx:id="colID1" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="colCliente1" prefWidth="95.0" text="Valor" />
+                  <TableColumn fx:id="colModelo1" prefWidth="174.0" text="Caução" />
+                  <TableColumn fx:id="colIni1" prefWidth="117.0" text="Valor de Acrescimo" />
+                  <TableColumn fx:id="colFim1" prefWidth="157.0" />
+                  <TableColumn fx:id="colDetalhes1" prefWidth="107.0" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tabelaArq" layoutX="58.0" layoutY="223.0" prefHeight="200.0" prefWidth="764.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1px 0; -fx-border-color: #D9D9D9;" visible="false">
+               <columns>
+                  <TableColumn fx:id="colID2" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="colCliente2" prefWidth="139.0" text="Bihete de Identidade" />
+                  <TableColumn fx:id="colModelo2" prefWidth="130.0" text="Habilitação" />
+                  <TableColumn fx:id="colIni2" prefWidth="117.0" text="Fotografia" />
+                  <TableColumn fx:id="colFim2" prefWidth="157.0" />
+                  <TableColumn fx:id="colDetalhes2" prefWidth="107.0" />
+               </columns>
+            </TableView>
          </children>
       </Pane>
    </children>
